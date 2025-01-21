@@ -1,3 +1,5 @@
+---
+name: validate-date
 on: push
 
 jobs:
