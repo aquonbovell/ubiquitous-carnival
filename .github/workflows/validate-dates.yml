@@ -1,12 +1,4 @@
-name: Custom Markdown Date Validation
-
-on:
-  pull_request:
-    paths:
-      - "**/*.md" # Trigger on changes to Markdown files in pull requests
-  push:
-    paths:
-      - "**/*.md" # Trigger on pushes for Markdown files
+on: [pull_request]
 
 jobs:
   validate-dates:
