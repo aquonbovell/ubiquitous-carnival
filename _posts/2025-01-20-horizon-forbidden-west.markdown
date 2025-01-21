@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Horizon Forbidden West"
-date: 2025-01-20 09:12:24 -0400
+date: 2025--20 09:12:24 -0400
 categories: games ps5
 ---
 
