@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Returnal"
+date: 2025-01-20 09:12:24 -0400
+categories: games ps5
+---
+
+A rogue-like sci-fi shooter where players explore a mysterious alien planet, uncovering its secrets while trapped in a time loop.
+
+![returnal-wallpaper](https://mp1st.com/wp-content/uploads/2021/04/Returnal-ray-tracing-60fps-4k-scaled.jpg.webp)
