@@ -1,9 +1,8 @@
----
-name: validate-date-formats
-on: [pull_request]
+on: push
 
 jobs:
   validate-dates:
+    name: Validate date formats
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
