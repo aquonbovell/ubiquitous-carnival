@@ -15,7 +15,7 @@ jobs:
       - name: Validate date format in Markdown files
         run: |
           # Find all Markdown files and check their dates
-          find . -name "*.md" -exec grep -H -E '^\s*date:\s*(.*)' {} \; | while read -r line; do
+          find . -name "*.markdown" -exec grep -H -E '^\s*date:\s*(.*)' {} \; | while read -r line; do
             # Extract the date from the line
             date=$(echo "$line" | sed -E 's/.*date:\s*(.*)/\1/')
             
