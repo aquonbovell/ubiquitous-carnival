@@ -1,0 +1,34 @@
+name: Validate Dates in Markdown Files
+
+on:
+  push:
+    paths:
+      - "**/*.md" # Trigger on markdown file changes
+  pull_request:
+    paths:
+      - "**/*.md" # Trigger on pull requests involving markdown files
+
+jobs:
+  validate-dates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate date format in Markdown files
+        run: |
+          # Find all Markdown files and check their dates
+          find . -name "*.md" -exec grep -H -E '^\s*date:\s*(.*)' {} \; | while read -r line; do
+            # Extract the date from the line, which should be in format 'YYYY-MM-DD'
+            date=$(echo "$line" | sed -E 's/.*date:\s*(.*)/\1/')
+            
+            # Validate the date format using a regular expression
+            if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+              echo "Error: Invalid date format in file $line. Expected YYYY-MM-DD format."
+              exit 1
+            fi
+          done
+
+      - name: All dates are valid
+        run: echo "All Markdown files have valid date formats."
