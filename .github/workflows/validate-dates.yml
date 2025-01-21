@@ -1,6 +1,6 @@
 ---
 name: validate-date
-on: push
+on: [push, pull_request]
 
 jobs:
   validate-dates:
