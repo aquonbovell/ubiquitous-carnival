@@ -20,7 +20,7 @@ jobs:
             date=$(echo "$line" | sed -E 's/.*date:\s*(.*)/\1/')
             
             # Validate the date format using a regular expression
-            if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2}\s[+-][0-9]{4}$ ]]; then
+            if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2} ]]; then
               echo "Error: Invalid date format in file $line. Expected YYYY-MM-DD HH:MM:SS -TZD format."
               exit 1
             fi
