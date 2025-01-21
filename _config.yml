@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Explore the best PS5 games that define the next generation 
   of gaming. From epic adventures to stunning visuals, these 
   titles showcase the pinnacle of PlayStation entertainment.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "ubiquitous-carnival" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: quon24
 github_username: aquonbovell
